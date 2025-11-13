@@ -1,0 +1,27 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    /* Basic Options */
+    // "checkJs": true /* Report errors in .js files. */,
+
+    /* Module Resolution Options */
+    "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@screens/*": ["src/screens/*"],
+      "@utils/*": ["src/utils/*"]
+    } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+  },
+  "exclude": [
+    "src/ReactotronConfig.js",
+    "bin",
+    "vendor",
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}

@@ -1,0 +1,24 @@
+import { apiClient } from 'api/apiClient';
+
+interface Response {
+  id: string;
+  device_id: string;
+  device_ip: string;
+  device_name: string;
+  device_os: string;
+  created_at: string;
+  updated_at: string;
+}
+
+interface Params {
+  device_id: string;
+  device_ip: string;
+  device_name: string;
+  device_os: string;
+  id: string;
+}
+
+export const authorize = async (params: Params) => {
+  const response = await apiClient.post<Response>('/device/authorize', params);
+  return response.data;
+};
